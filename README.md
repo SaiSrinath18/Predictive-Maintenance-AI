@@ -48,3 +48,23 @@ As a 2nd-year ECE student bridging into AI, today's core learnings included:
    ```bash
    python3 visualize.py
 3.Check the directory for failure_analysis.png to see the generated report.
+
+---
+
+## 🛠 Day 3: Feature Engineering & Predictive Logic
+**Objective:** Move from "Reactive Monitoring" to "Proactive Prevention" by analyzing signal trends.
+
+### 🧠 The Engineering Logic:
+In a 5V electronic circuit, a static temperature reading doesn't tell the whole story. To predict a failure, we must look at the **Velocity** of the heat.
+
+1. **Signal Smoothing (Moving Average):** Implemented a 5-point Moving Average (MA) to filter out high-frequency electrical noise ("sound waves") from the raw sensor data. This reveals the **True Thermal Trend**.
+2. **Thermal Gradient ($\Delta T$):** Calculated the rate of change (slope) of the temperature. This acts as the "Speedometer" for the circuit's heat.
+3. **Early Warning System:** Developed a predictive algorithm: $T_{future} = T_{now} + (\Delta T \times 2)$. 
+   If the predicted temperature exceeds **85°C**, the system triggers a "Red Zone" warning immediately, providing a **2-second safety buffer** before physical failure occurs.
+
+### 📊 Visual Evolution:
+* **`visualize_v2.py`**: A dual-graph dashboard showing:
+    * **Top:** Raw vs. Smoothed Temperature with Predictive Shading.
+    * **Bottom:** Thermal Velocity (The "Eyes" of the AI).
+
+**Key Achievement:** The system now identifies a "Sloppy Footwork" trend and flags danger while the hardware is still at a safe operating temperature.
