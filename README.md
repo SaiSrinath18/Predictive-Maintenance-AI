@@ -68,3 +68,24 @@ In a 5V electronic circuit, a static temperature reading doesn't tell the whole 
     * **Bottom:** Thermal Velocity (The "Eyes" of the AI).
 
 **Key Achievement:** The system now identifies a "Sloppy Footwork" trend and flags danger while the hardware is still at a safe operating temperature.
+
+---
+
+## 🤖 Day 4: Machine Learning Model Training
+**Objective:** Replace manual "If-Then" logic with an autonomous Random Forest Classifier.
+
+### Key Technical Tasks:
+* **Model Selection:** Implemented a **Random Forest Classifier** (100 Decision Trees) to handle non-linear sensor data and noise.
+* **Data Splitting:** Performed an **80/20 Train-Test split** using `scikit-learn` to validate model performance on unseen data.
+* **Feature Integration:** The model was trained using the features engineered on Day 3: `Temperature_C`, `Temp_Gradient`, and `Temp_MA_5`.
+* **Model Serialization:** Saved the trained weights into `maintenance_model.pkl` using `joblib` for portable deployment.
+
+### Visualizing the AI Logic:
+The Day 4 visualization (`day4_ai_logic.png`) displays the **Decision Boundary**.
+* **Blue Clusters:** Safe operating conditions identified by the AI.
+* **Orange Clusters:** "Early Warning" states flagged by the model. 
+* **Observation:** The AI successfully identifies potential failures based on **Heat Velocity (Gradient)** even before the temperature reaches the critical 85°C threshold.
+
+### Performance Metrics:
+* **Accuracy:** [Insert your Accuracy here, e.g., 0.98]
+* **F1-Score:** [Insert your F1-Score here, e.g., 0.97]
