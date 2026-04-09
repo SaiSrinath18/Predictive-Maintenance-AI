@@ -89,3 +89,10 @@ The Day 4 visualization (`day4_ai_logic.png`) displays the **Decision Boundary**
 ### Performance Metrics:
 * **Accuracy:** [Insert your Accuracy here, e.g., 0.98]
 * **F1-Score:** [Insert your F1-Score here, e.g., 0.97]
+
+## 📡 Day 5: Real-Time Inference Engine
+**Objective:** Deploy the trained model to process a live data stream and provide predictive alerts.
+
+* **Mechanism:** Developed `inference_engine.py` to load the serialized Random Forest model.
+* **Simulation:** Created a sensor-data generator that mimics real-time thermal readings from a 5V power rail.
+* **Proactive Logic:** The engine calculates a **Risk Score** (probability) for each reading, allowing the system to trigger "Danger" alerts before physical thresholds are breached.
