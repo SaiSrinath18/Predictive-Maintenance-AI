@@ -90,7 +90,12 @@ The Day 4 visualization (`day4_ai_logic.png`) displays the **Decision Boundary**
 * **Accuracy:** [Insert your Accuracy here, e.g., 0.98]
 * **F1-Score:** [Insert your F1-Score here, e.g., 0.97]
 
-## 📡 Day 5: Real-Time Inference Engine
+### 📡 Day 5: Real-Time Inference & Risk Assessment
+**Objective:** Transition from batch processing to a continuous "Edge Computing" simulation.
+
+* **Inference Logic:** Utilized `joblib` for model deserialization, enabling the Random Forest "Brain" to process live data streams.
+* **Risk Probability:** Implemented `.predict_proba()` to generate a 0-100% risk confidence score, allowing for multi-stage safety alerts (e.g., 50% = Caution, 90% = Shutdown).
+* **System Latency:** Verified that the Mac mini M4 can perform inference in <10ms, meeting the requirements for high-speed power rail monitoring.
 **Objective:** Deploy the trained model to process a live data stream and provide predictive alerts.
 
 * **Mechanism:** Developed `inference_engine.py` to load the serialized Random Forest model.
